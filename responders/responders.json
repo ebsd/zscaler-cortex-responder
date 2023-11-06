@@ -1,0 +1,59 @@
+[
+{
+  "name": "ZscalerBlacklist",
+  "version": "1.0",
+  "author": "Darren Sykes, Mikael Keri",
+  "url": "https://github.com/TheHive-Project/",
+  "license": "AGPL-V3",
+  "description": "Block the observable in Zscaler",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "Zscaler",
+  "configurationItems": [
+    {
+      "name": "category_name",
+      "description": "Name of category",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "username",
+      "description": "Zscaler username",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "password",
+      "description": "Zscaler password",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "Zscaler API key",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "base_uri",
+      "description": "The base URL of your Zscaler subscription without tailing slash",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "config_name",
+      "description": "Name of the Zscaler URL category, ex: <Company Blocklist X>",
+      "type": "string",
+      "multi": false,
+      "required": true
+    }
+  ],
+  "dockerImage": "ebsd/zscalerblacklist:1.0"
+}
+]
